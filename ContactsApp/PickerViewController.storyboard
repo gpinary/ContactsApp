@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="Y6W-OH-hqX" customClass="PickerViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpR-ga-7tf">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsW-FS-rp4">
+                                <rect key="frame" x="0.0" y="586" width="393" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-6b-wds">
+                                        <rect key="frame" x="296" y="8" width="89" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="89" id="P27-Cv-dzI"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonActWith_sender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c4y-UZ-al7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zLv-6b-wds" secondAttribute="bottom" constant="8" id="4Ho-vt-Xeq"/>
+                                    <constraint firstAttribute="height" constant="50" id="R5v-9a-acB"/>
+                                    <constraint firstItem="zLv-6b-wds" firstAttribute="top" secondItem="CsW-FS-rp4" secondAttribute="top" constant="8" id="frT-eJ-PtV"/>
+                                    <constraint firstAttribute="trailing" secondItem="zLv-6b-wds" secondAttribute="trailing" constant="8" id="vY7-YK-M5t"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-Mp-bWb">
+                                <rect key="frame" x="0.0" y="636" width="393" height="216"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ENX-Mp-bWb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5ig-jg-SZA"/>
+                            <constraint firstItem="ENX-Mp-bWb" firstAttribute="top" secondItem="CsW-FS-rp4" secondAttribute="bottom" id="8a5-74-oOC"/>
+                            <constraint firstItem="rpR-ga-7tf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="A7L-k1-6bf"/>
+                            <constraint firstAttribute="bottom" secondItem="ENX-Mp-bWb" secondAttribute="bottom" id="PNJ-8l-UAB"/>
+                            <constraint firstItem="CsW-FS-rp4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QPT-G2-FWF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CsW-FS-rp4" secondAttribute="trailing" id="SY5-6s-x1O"/>
+                            <constraint firstAttribute="bottom" secondItem="rpR-ga-7tf" secondAttribute="bottom" id="WUq-G0-VxO"/>
+                            <constraint firstItem="ENX-Mp-bWb" firstAttribute="top" secondItem="CsW-FS-rp4" secondAttribute="bottom" id="Yr6-jM-V5t"/>
+                            <constraint firstItem="rpR-ga-7tf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="dUs-rJ-R0k"/>
+                            <constraint firstItem="ENX-Mp-bWb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="nSN-zv-OqA"/>
+                            <constraint firstAttribute="bottom" secondItem="ENX-Mp-bWb" secondAttribute="bottom" id="uDo-Gf-XJf"/>
+                            <constraint firstItem="rpR-ga-7tf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="urG-cM-oIs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterPickerView" destination="ENX-Mp-bWb" id="DfL-l6-Fjv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+</document>
